@@ -1,6 +1,6 @@
 #!/bin/sh
 adduser user
-apt-get update && apt-get upgrade -y && apt-get install nano software-properties-common python-software-properties fail2ban nano xfce4 xfce4-goodies tightvncserver firefox -y
+apt-get update && apt-get upgrade -y && apt-get install nano software-properties-common python-software-properties fail2ban nano xfce4 xfce4-goodies tightvncserver firefox htop nload -y
 sleep 1s
 myuser="user"
 sleep 1s
@@ -45,4 +45,5 @@ systemctl start vncserver@1
 add-apt-repository ppa:webupd8team/java -y
 apt-get update
 apt-get install oracle-java8-installer -y
+apt purge --autoremove xscreensaver -y
 echo "DONE!"
